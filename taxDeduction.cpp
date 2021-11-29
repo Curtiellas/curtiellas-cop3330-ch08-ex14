@@ -11,6 +11,8 @@ the rate multiplied by the income
 */
 
 #include <iostream>
+#include <limits>
+#include <iomanip>      // std::setprecision
 using namespace std;
 
 #include "Tax.h"
@@ -46,9 +48,11 @@ int main()
         catch (const char* e)
         {
             std::cerr << e << '\n';
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
 
     } while (tax.getIncome() == -1);
 
-    cout << "Your income tax for last year is: $" << tax.getTotalTax() << endl;
+    cout << "Your income tax for last year is: $" << std::fixed << std::setprecision(2) << tax.getTotalTax() << endl;
 }
