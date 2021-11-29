@@ -8,25 +8,18 @@ Try it; write a couple of small programs to see what works.
 idea: the year people were born in is a constant value, a function
 may use a year value as parameter, and print some modification of
 that year, e.g. "in what year were they 21 years old"
-
 */
-
 #include <iostream>
-
 using namespace std;
-
-typedef struct BirthYear {
-    const int GeorgeOrwell = 1903;
-    const int AlbertCamus = 1913;
-    const int FranzKafka = 1883;
-
-} BirthYear;
 
 void yearWhenTwentyOne(const int birthYear);
 
 int main()
 {
-    BirthYear years;
+    const int GeorgeOrwell = 1903;
+    const int AlbertCamus = 1913;
+    const int FranzKafka = 1883;
+
     int choice;
 
     cout << "Enter a number to select an author, I will tell you in what year they were 21 years old" << endl;
@@ -47,13 +40,13 @@ int main()
     switch (choice)
     {
     case 1:
-        yearWhenTwentyOne(years.GeorgeOrwell);
+        yearWhenTwentyOne(GeorgeOrwell);
         break;
     case 2:
-        yearWhenTwentyOne(years.AlbertCamus);
+        yearWhenTwentyOne(AlbertCamus);
         break;
     case 3:
-        yearWhenTwentyOne(years.FranzKafka);
+        yearWhenTwentyOne(FranzKafka);
         break;
     default:
         break;
