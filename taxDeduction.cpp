@@ -11,7 +11,7 @@ the rate multiplied by the income
 */
 
 #include <iostream>
-#include <limits>
+#include <limits>       // numeric_limits<streamsize>::max()
 #include <iomanip>      // std::setprecision
 using namespace std;
 
@@ -21,11 +21,11 @@ using namespace std;
 int main()
 {
     // https://www.thebalance.com/what-the-average-american-pays-in-taxes-4768594
-    // marginal tax rates               // income threshold
-    const double bracket1 = 0.1;  // $0 to $9,950
-    const double bracket2 = 0.12; // $9,951 to $40,525
-    const double bracket3 = 0.22; // $40,526 to $86,375
-    const double bracket4 = 0.24; // $86,376 to $164,925
+    // marginal tax rates           // income threshold
+    const double bracket1 = 0.1;    // $0 to $9,950
+    const double bracket2 = 0.12;   // $9,951 to $40,525
+    const double bracket3 = 0.22;   // $40,526 to $86,375
+    const double bracket4 = 0.24;   // $86,376 to $164,925
 
     // user-entered income
     double income = -1;
